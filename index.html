@@ -200,19 +200,19 @@ h2.t b{font-weight:700}
 .end{font-size:40px;line-height:1.5;font-weight:300;letter-spacing:-.03em}
 .end b{font-weight:800}
 @media (prefers-reduced-motion:reduce){.slide,.slide .rv{transition:none!important}}
-.dg{grid-template-columns:1.2fr 1fr .9fr;gap:24px;margin-top:32px}
-.dg .c{min-height:0;padding:26px 30px}
-.dg h3{margin:0 0 12px}
-.dg p{font-size:21px;line-height:1.5;letter-spacing:-.02em}
-.dg .sub{font-size:17px;color:var(--ink-2);margin-top:16px}
-.sw{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
-.sw i{display:block;width:34px;height:34px;border:1px solid var(--line)}
-.sw b{display:block;font-size:19px;line-height:1.3;font-weight:700}
-.sw span{display:block;font-size:16px;line-height:1.3;color:var(--ink-2)}
-.fs{border-top:1px solid var(--line);padding:12px 0;font-size:24px;line-height:1.3;letter-spacing:-.02em}
-.fsample{font-size:52px;line-height:1.2;font-weight:700;letter-spacing:-.03em;margin:4px 0 12px;white-space:nowrap}
-.lgbox{background:#E8FAF6;display:flex;align-items:center;justify-content:center;height:190px;margin-bottom:16px}
-.lgbox img{width:300px;height:auto}
+.gd{margin-top:28px;border-bottom:1px solid var(--line)}
+.gd .r{display:grid;grid-template-columns:400px 1fr;gap:40px;align-items:center;padding:26px 0;border-top:1px solid var(--line)}
+.gd h3{font-size:30px;font-weight:700;letter-spacing:-.03em}
+.gd .r p{font-size:19px;line-height:1.5;color:var(--ink-2);margin-top:8px;letter-spacing:-.02em}
+.gd .cs{display:flex;gap:20px}
+.gd .cg{display:flex;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.gd .cg div{width:148px;height:84px;padding:10px;display:flex;align-items:flex-end;font-size:16px;font-weight:600;color:#fff;letter-spacing:.02em}
+.gd .cg div.lt{color:var(--ink)}
+.gd .ty{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center}
+.gd .ty .big{display:block;font-size:56px;line-height:1.2;font-weight:700;letter-spacing:-.03em;white-space:nowrap}
+.gd .ty .big small{display:block;font-size:17px;font-weight:700;color:var(--ink-2);letter-spacing:0}
+.gd .ty ul{list-style:none;font-size:24px;line-height:1.55;letter-spacing:-.02em}
+.gd .lg img{display:block;width:280px;height:auto}
 /* 인쇄 / PDF: 슬라이드 한 장 = 한 페이지 */
 @page{size:1920px 1080px;margin:0}
 @media print{
@@ -323,18 +323,18 @@ h2.t b{font-weight:700}
   <section class="slide" data-theme="light">
     <div class="eb rv"><span class="en">Design Guide</span><span class="tg">3 · 직군 관점의 설계 판단</span></div>
     <h2 class="t rv">키핑 <b>디자인 가이드</b></h2>
-    <div class="ar dg rv">
-      <div class="c"><h3>컬러</h3><p>헬스케어를 떠올리게 하는 초록빛 민트로, 약 관리를 부담 없이 산뜻하게 느끼게 해요</p>
-        <div style="margin-top:14px"><div class="sw"><i style="background:#52CEB0"></i><div><b>키핑 민트 #52CEB0</b><span>주 버튼</span></div></div><div class="sw"><i style="background:#35B89A"></i><div><b>로고 민트 #35B89A</b><span>큰 로고, 시간선 지난 구간</span></div></div><div class="sw"><i style="background:#239B80"></i><div><b>딥 민트 #239B80</b><span>작은 로고, 강조 글자</span></div></div><div class="sw"><i style="background:#E8FAF6"></i><div><b>연한 민트 #E8FAF6</b><span>선택된 줄, 배경</span></div></div><div class="sw"><i style="background:linear-gradient(90deg,#17191C 50%,#6B7280 50%)"></i><div><b>글자 #17191C / #6B7280</b><span>제목·본문 / 보조 글자</span></div></div><div class="sw"><i style="background:#C2261D"></i><div><b>주의 빨강 #C2261D</b><span>주의에만</span></div></div></div>
-        <p class="sub">민트는 브랜드 색이라 안전·위험을 뜻하지 않아요. 뜻을 가진 색은 <span style="color:#C2261D;font-weight:700">빨강(주의)</span>뿐이에요</p></div>
-      <div class="c"><h3>폰트</h3><p style="font-weight:700">Pretendard</p>
-        <div class="fsample">가나다 ABC 123</div>
-        <div class="fs" style="font-weight:700">제목 Bold 18</div><div class="fs" style="font-weight:600">강조 SemiBold</div><div class="fs" style="font-weight:400">본문 Regular 15</div><div class="fs" style="font-weight:400;border-bottom:1px solid var(--line)">설명 12</div>
-        <p class="sub">글꼴은 하나만 써서 화면을 차분하게</p></div>
-      <div class="c"><h3>로고·이름</h3>
-        <div class="lgbox"><img src="assets/brand/keeping-logo.svg" alt="Keeping 로고"></div>
-        <p>Keeping은 "지키다"라는 뜻의 Keep에서 왔어요. 건강을 지켜 준다는 뜻과, 부르기 쉬운 친근함을 담았어요</p>
-        <p class="sub">시작 화면: 로고 민트 #35B89A, 연한 민트 배경<br>환영 화면: 딥 민트 #239B80로 작게</p></div>
+    <div class="gd rv">
+      <div class="r"><div><h3>로고·이름</h3><p>Keeping은 "지키다"라는 뜻의 Keep에서 왔어요. 건강을 지켜 준다는 뜻과, 부르기 쉬운 친근함을 담았어요</p></div>
+        <div class="lg"><img src="assets/brand/keeping-logo.svg" alt="Keeping 로고"></div></div>
+      <div class="r"><div><h3>폰트</h3><p>글꼴은 하나만 써서 화면을 차분하게</p></div>
+        <div class="ty"><span class="big"><small>Pretendard</small>키핑이 함께 챙겨요</span>
+          <ul><li style="font-weight:700">제목 Bold 18</li><li style="font-weight:600">강조 SemiBold</li><li style="font-weight:400">본문 Regular 15</li><li style="font-weight:400">설명 12</li></ul></div></div>
+      <div class="r"><div><h3>컬러</h3><p>헬스케어를 떠올리게 하는 초록빛 민트로, 약 관리를 부담 없이 산뜻하게 느끼게 해요</p></div>
+        <div class="cs">
+          <div class="cg"><div style="background:#52CEB0">#52CEB0</div><div style="background:#35B89A">#35B89A</div><div style="background:#239B80">#239B80</div><div class="lt" style="background:#E8FAF6">#E8FAF6</div></div>
+          <div class="cg"><div style="background:#17191C">#17191C</div><div style="background:#6B7280">#6B7280</div></div>
+          <div class="cg"><div style="background:#C2261D">#C2261D</div></div>
+        </div></div>
     </div>
   </section>
   <section class="slide" data-theme="light">
@@ -345,8 +345,8 @@ h2.t b{font-weight:700}
   <section class="slide" data-theme="dark">
     <div class="eb rv"><span class="en">Metrics</span><span class="tg">4 · 평가 리포트 · 지표</span></div>
     <h2 class="t rv">확인한 <b>숫자</b></h2>
-    <div class="qs3 rv" style="margin-top:50px"><div><span class="num t">23,619</span><p>병용금기 약 쌍</p></div><div><span class="num t">23,126</span><p>약 제품</p></div><div><span class="num t">46,119</span><p>영양제 제품</p></div></div>
-    <div class="qs3 rv" style="margin-top:20px;border-top-color:var(--ln)"><div><span class="num t">990</span><p>허가사항을 읽어 낸 성분</p></div><div><span class="num t">전부 통과</span><p>자동 시험</p></div><div><span class="num t">96~99%</span><p>시안과 화면 일치율</p></div></div>
+    <div class="qs3 rv" style="margin-top:50px"><div><span class="num t">23,619</span><p>공식 지정 병용금기 약 조합</p></div><div><span class="num t">23,126</span><p>검색할 수 있는 약</p></div><div><span class="num t">46,119</span><p>검색할 수 있는 영양제</p></div></div>
+    <div class="qs3 rv" style="margin-top:20px;border-top-color:var(--ln)"><div><span class="num t">990</span><p>약 설명서에서 주의 문장을 읽어 낸 성분</p></div><div><span class="num t">전부 통과</span><p>프로그램이 스스로 점검한 시험</p></div><div><span class="num t">96~99%</span><p>디자인과 실제 화면이 같은 정도</p></div></div>
   </section>
   <section class="slide" data-theme="light">
     <div class="eb rv"><span class="en">Time</span><span class="tg">4 · 평가 리포트 · 소요 시간</span></div>
