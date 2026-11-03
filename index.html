@@ -346,10 +346,10 @@ h2.t b{font-weight:700}
     <div class="tbl rv" style="--c:1.2fr 1fr 1.2fr"><div class="hdr"><span>선택</span><span>얻은 것</span><span>내준 것</span></div><div class="r"><span class=""><b>내 약과 겹칠 때만 알려요</b></span><span class="">읽을 양이 줄어요</span><span class="">주의사항 전체를 한눈에 보는 건 못 해요</span></div><div class="r"><span class=""><b>“찾은 주의가 없어요”라고만 말해요</b></span><span class="">못 찾은 걸 속이지 않아요</span><span class="">“안전해요”라는 안심은 못 줘요</span></div><div class="r"><span><b>복용에 대한 지시없이 주의에 대한 근거를 보여줘요</b></span><span class="">스스로 판단했다는 통제감</span><span class="">“이렇게 하세요”라는 분명한 답을 줄 수 없어요</span></div></div>
   </section>
   <section class="slide" data-theme="dark">
-    <div class="eb rv"><span class="en">Metrics</span><span class="tg">4 · 평가 리포트 · 지표</span></div>
-    <h2 class="t rv">확인한 <b>숫자</b></h2>
-    <div class="qs3 rv" style="margin-top:50px"><div><span class="num t">23,619</span><p>공식 지정 병용금기 약 조합</p></div><div><span class="num t">23,126</span><p>검색할 수 있는 약</p></div><div><span class="num t">46,119</span><p>검색할 수 있는 영양제</p></div></div>
-    <div class="qs3 rv" style="margin-top:20px;border-top-color:var(--ln)"><div><span class="num t">990</span><p>약 설명서에서 주의 문장을 읽어 낸 성분</p></div><div><span class="num t">전부 통과</span><p>프로그램이 스스로 점검한 시험</p></div><div><span class="num t">96~99%</span><p>디자인과 실제 화면이 같은 정도</p></div></div>
+    <div class="eb rv"><span class="en">Metrics</span><span class="tg">4 · 평가 리포트 · 데이터 지표</span></div>
+    <h2 class="t rv"><b>데이터</b> 지표</h2>
+    <div class="qs3 rv" style="margin-top:50px;grid-template-columns:repeat(2,1fr)"><div><span class="num t">23,619</span><p>공식 지정 병용금기 약 조합</p></div><div><span class="num t">23,126</span><p>검색할 수 있는 약</p></div></div>
+    <div class="qs3 rv" style="margin-top:20px;border-top-color:var(--ln);grid-template-columns:repeat(2,1fr)"><div><span class="num t">46,119</span><p>검색할 수 있는 영양제</p></div><div><span class="num t">990</span><p>약 설명서에서 주의 문장을 읽어 낸 성분</p></div></div>
   </section>
   <section class="slide" data-theme="light">
     <div class="eb rv"><span class="en">Time</span><span class="tg">4 · 평가 리포트 · 소요 시간</span></div>
@@ -416,7 +416,7 @@ h2.t b{font-weight:700}
   var hd=document.getElementById('hd');
   var mlist=document.getElementById('mlist');
   var cur=0;
-  var titles=['표지', '문제 정의', '방향', '서비스 소개', '사용법 ① 시작과 등록', '사용법 ② 시연', '설계 판단', '디자인 가이드', '맞바꾼 것', '지표', '소요 시간', '문서', 'AI의 실수 사례', '다음에 할 일', '전체 회고', 'Thank you'];
+  var titles=['표지', '문제 정의', '방향', '서비스 소개', '사용법 ① 시작과 등록', '사용법 ② 시연', '설계 판단', '디자인 가이드', '맞바꾼 것', '데이터 지표', '소요 시간', '문서', 'AI의 실수 사례', '다음에 할 일', '전체 회고', 'Thank you'];
 
   slides.forEach(function(s,i){
     var d=document.createElement('i');dotsEl.appendChild(d);
