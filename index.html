@@ -189,8 +189,11 @@ h2.t b{font-weight:700}
 .stp{list-style:none;margin-top:36px;border-top:1px solid var(--ln)}
 .stp li{display:grid;grid-template-columns:44px 1fr;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--ln);font-size:26px;line-height:1.45;letter-spacing:-.02em;color:var(--fg-2)}
 .stp li i{font-style:normal;font-weight:700;color:var(--red)}
-.vs{align-items:start}
-.vs .arrow{padding-top:90px;font-size:60px;color:var(--red);text-align:center}
+.vs{align-items:stretch}
+.vs>div:not(.arrow){display:flex;flex-direction:column}
+.stp{flex:1;display:flex;flex-direction:column}
+.stp li{flex:1;align-items:center}
+.vs .arrow{align-self:center;font-size:60px;color:var(--red);text-align:center}
 .vs h3{font-size:26px;font-weight:700;margin-bottom:24px;color:var(--fg-2)}
 .cd3{grid-template-rows:auto}
 .cd3>div{grid-row:auto;display:block}
@@ -206,7 +209,7 @@ h2.t b{font-weight:700}
 .gd .r p{font-size:19px;line-height:1.5;color:var(--ink-2);margin-top:8px;letter-spacing:-.02em}
 .gd .cs{display:flex;gap:20px}
 .gd .cg{display:flex;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
-.gd .cg div{width:148px;height:84px;padding:10px;display:flex;align-items:flex-end;font-size:16px;font-weight:600;color:#fff;letter-spacing:.02em}
+.gd .cg div{width:148px;height:84px;padding:10px;display:flex;align-items:flex-end;font-size:14px;font-weight:400;color:#fff;letter-spacing:.02em}
 .gd .cg div.lt{color:var(--ink)}
 .gd .ty{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center}
 .gd .ty .big{display:block;font-size:56px;line-height:1.2;font-weight:700;letter-spacing:-.03em;white-space:nowrap}
@@ -278,7 +281,7 @@ h2.t b{font-weight:700}
     <h2 class="t rv">등록하면 <b>하루 복약 시간표</b>가<br>만들어져요</h2>
     <div class="ar rv">
       <div class="c"><span class="num">1</span><h3>등록</h3><div class="w"><p>약·영양제를 검색하고<br>언제 먹는지 정해요</p></div></div>
-      <div class="c"><span class="num">2</span><h3>시간표</h3><div class="w"><p>아침·점심·저녁으로<br>묶어서 체크해요</p></div></div>
+      <div class="c"><span class="num">2</span><h3>시간표</h3><div class="w"><p>아침, 점심, 저녁으로 묶고 어려운 약 이름 대신 처방 진료과별로 체크해요</p><p style="font-size:17px;color:var(--ink-2)">자세한 약 정보는 탭하면 보여요</p></div></div>
       <div class="c"><span class="num">3</span><h3>주의</h3><div class="w"><p>공식 자료의 근거와<br>함께 알려줘요</p></div></div>
     </div>
     <div class="ban rv" style="margin-top:30px"><em>Evidence</em>안내마다 근거가 붙어 있어요 · 설명서 원문을 바로 볼 수 있어요</div>
@@ -326,7 +329,7 @@ h2.t b{font-weight:700}
     <div class="gd rv">
       <div class="r"><div><h3>로고·이름</h3><p>Keeping은 "지키다"라는 뜻의 Keep에서 왔어요. 건강을 지켜 준다는 뜻과, 부르기 쉬운 친근함을 담았어요</p></div>
         <div class="lg"><img src="assets/brand/keeping-logo.svg" alt="Keeping 로고"></div></div>
-      <div class="r"><div><h3>폰트</h3><p>글꼴은 하나만 써서 화면을 차분하게</p></div>
+      <div class="r"><div><h3>폰트</h3><p>한글 약 이름, 영문 성분명, 시간 숫자가 한 화면에 섞여도 자연스럽고 가독성이 좋아요</p></div>
         <div class="ty"><span class="big"><small>Pretendard</small>키핑이 함께 챙겨요</span>
           <ul><li style="font-weight:700">제목 Bold 18</li><li style="font-weight:600">강조 SemiBold</li><li style="font-weight:400">본문 Regular 15</li><li style="font-weight:400">설명 12</li></ul></div></div>
       <div class="r"><div><h3>컬러</h3><p>헬스케어를 떠올리게 하는 초록빛 민트로, 약 관리를 부담 없이 산뜻하게 느끼게 해요</p></div>
@@ -354,14 +357,9 @@ h2.t b{font-weight:700}
     <div class="vs rv">
       <div><h3>검색으로 찾기</h3><div class="blank" style="color:var(--mut)">10~15분</div><ol class="stp"><li><i>1</i><span>포털에서 약·영양제 이름 검색</span></li><li><i>2</i><span>의약품안전나라, 약학정보원에서 약 정보 찾기</span></li><li><i>3</i><span>영양제 정보는 식품안전나라에서 따로 찾기</span></li><li><i>4</i><span>흩어진 정보를 직접 맞춰 보고 판단하기</span></li></ol></div>
       <div class="arrow">→</div>
-      <div><h3>키핑으로 확인</h3><div class="blank" style="color:var(--red)">1~2분</div><ol class="stp"><li><i>1</i><span>약·영양제 등록</span></li><li><i>2</i><span>하루 시간표에서 주의 확인</span></li><li><i>3</i><span>근거(설명서 원문) 보기</span></li></ol></div>
+      <div><h3>키핑으로 확인</h3><div class="blank" style="color:var(--red)">2~3분</div><ol class="stp"><li><i>1</i><span>약·영양제 등록</span></li><li><i>2</i><span>하루 시간표에서 주의 확인</span></li><li><i>3</i><span>근거(설명서 원문) 보기</span></li></ol></div>
     </div>
     <p class="src abs-src rv">개발자가 직접 측정한 시간</p>
-  </section>
-  <section class="slide" data-theme="light">
-    <div class="eb rv"><span class="en">Prompt</span><span class="tg">5 · AI 활용 과정 · 프롬프트 변경 기록</span></div>
-    <h2 class="t rv">AI에게 이렇게 <b>바꿔서</b> 시켰어요</h2>
-    <div class="tbl rv" style="--c:1fr 2fr"><div class="hdr"><span>처음</span><span>바꾼 뒤</span></div><div class="r"><span class="">“시안과 비교해 줘”</span><span class=""><span class="a">일치율 97% 이상 + 글자·버튼 어긋남 0곳이 합격</span></span></div><div class="r"><span class="">“시안 그대로 구현해 줘”</span><span class=""><span class="a">시안과 다르게 할 곳은 목록에만. 그 밖은 고치지 말고 보고해</span></span></div><div class="r"><span class="">“브라우저에서 확인해 줘”</span><span class=""><span class="a">새 프로필로 열어, 로고 영역의 민트색 점 개수가 기준 이상이면 통과</span></span></div><div class="r"><span class="">“push 전에 확인해”</span><span class=""><span class="a">스크립트가 ✅/❌로 판정, .env의 모든 값을 검사</span></span></div></div>
   </section>
   <section class="slide" data-theme="soft">
     <div class="eb rv"><span class="en">Docs & Skills</span><span class="tg">5 · AI 활용 과정 · 문서와 스킬</span></div>
@@ -374,8 +372,8 @@ h2.t b{font-weight:700}
     
   </section>
   <section class="slide" data-theme="light">
-    <div class="eb rv"><span class="en">AI Mistakes</span><span class="tg">5 · AI 활용 과정 · AI의 실수를 잡은 사례</span></div>
-    <h2 class="t rv">AI가 틀린 곳을 <b>숫자로</b> 잡았어요</h2>
+    <div class="eb rv"><span class="en">AI Mistakes</span><span class="tg">5 · AI 활용 과정</span></div>
+    <h2 class="t rv">AI의 실수를 <b>잡은 사례</b></h2>
     <div class="cc3 rv" style="margin-right:0;margin-top:40px;grid-template-rows:repeat(4,auto);grid-template-columns:repeat(2,minmax(0,1fr))"><div class="cc"><div class="top"><span class="num">1</span><b>글자 크기 추정</b></div><div class="w"><span class="chip">AI의 실수</span><p>글자 크기를 19.5px로 추정</p></div><div class="w"><span class="chip">어떻게 잡았나</span><p>시안과 화면을 실측 비교 → 22px가 맞음</p></div><div class="w"><span class="chip">바뀐 것</span><p>추정이 아니라 측정값을 기준으로</p></div></div><div class="cc"><div class="top"><span class="num">2</span><b>점검 누락</b></div><div class="w"><span class="chip">AI의 실수</span><p>push 점검이 키 한 종류만 검사</p></div><div class="w"><span class="chip">어떻게 잡았나</span><p>점검 결과를 직접 읽다가 발견</p></div><div class="w"><span class="chip">바뀐 것</span><p>.env의 모든 값을 검사하는 스크립트</p></div></div></div>
   </section>
   <section class="slide" data-theme="dark">
@@ -386,6 +384,11 @@ h2.t b{font-weight:700}
       <div><div class="top"><span class="num">2</span><span class="lb">DESIGN</span></div><h3>화면</h3><ul><li>약 설명서·주의사항을 중요한 것부터, 읽기 쉽게 다시 디자인</li><li>모바일 환경에서 UX·UI 다듬기</li></ul></div>
       <div><div class="top"><span class="num">3</span><span class="lb">REGISTRATION</span></div><h3>등록</h3><ul><li>처방전·약봉투를 사진으로 읽어 오기(OCR)와 처방전 자동 연동이 가능한지 알아보기</li><li>시작 화면 개선: 로그인, 개인정보 수집 방식 등</li></ul></div>
     </div>
+  </section>
+  <section class="slide" data-theme="light">
+    <div class="eb rv"><span class="en">Retrospective</span><span class="tg">7 · 회고 · 프로젝트 전체 회고</span></div>
+    <h2 class="t rv">프로젝트 <b>전체 회고</b></h2>
+    <div class="tbl rv" style="--c:60px 220px 1fr"><div class="hdr"><span></span><span>한 줄 요약</span><span>설명</span></div><div class="r"><span>1</span><span><b>데이터</b></span><span>기획과 디자인만 잡았을 때는 가능했던 기능이, 현실의 데이터 앞에서 막혔어요</span></div><div class="r"><span>2</span><span><b>AI 구현</b></span><span>디자인을 AI로 구현하기가 쉽지 않았어요. 원하는 것을 전문 용어로 정확하게 전달하는 게 중요했어요</span></div><div class="r"><span>3</span><span><b>다음</b></span><span>그래서 AI를 더 잘 쓰는 방법을 찾아보려고 해요</span></div></div>
   </section>
   <section class="slide cover" data-theme="light">
     <p class="lab rv">AI 네이티브 커리어캠프 2기 · 1차 프로젝트</p>
@@ -413,7 +416,7 @@ h2.t b{font-weight:700}
   var hd=document.getElementById('hd');
   var mlist=document.getElementById('mlist');
   var cur=0;
-  var titles=['표지', '문제 정의', '방향', '서비스 소개', '사용법 ① 시작과 등록', '사용법 ② 시연', '설계 판단', '디자인 가이드', '맞바꾼 것', '지표', '소요 시간', '프롬프트 변경 기록', '문서와 스킬', 'AI의 실수 사례', '다음에 할 일', 'Thank you'];
+  var titles=['표지', '문제 정의', '방향', '서비스 소개', '사용법 ① 시작과 등록', '사용법 ② 시연', '설계 판단', '디자인 가이드', '맞바꾼 것', '지표', '소요 시간', '문서와 스킬', 'AI의 실수 사례', '다음에 할 일', '전체 회고', 'Thank you'];
 
   slides.forEach(function(s,i){
     var d=document.createElement('i');dotsEl.appendChild(d);
